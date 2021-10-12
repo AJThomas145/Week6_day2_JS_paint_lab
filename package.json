@@ -1,0 +1,14 @@
+{
+  "name": "lab_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "paint.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.1.2"
+  }
+}
