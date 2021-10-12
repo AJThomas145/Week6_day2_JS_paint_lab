@@ -10,24 +10,24 @@ describe("Paint", function(){
 
     it("should show litres of paint", function(){
         const actual = paint.litres;
-        assert.strictEqual(actual, 10)
+        assert.strictEqual(actual, 10);
     });
 
     it("should be able to check if paint can is empty", function(){
         const actual = paint.empty;
-        assert.strictEqual(actual, false)
+        assert.strictEqual(actual, false);
     });
 
     it("should be able to empty itself of paint", function(){
         paint.emptyPaintCan()
         const actual = paint.litres;
-        assert.strictEqual(actual, 0)
+        assert.strictEqual(actual, 0);
     });
 
     it("should be able to update that can is empty", function(){
         paint.emptyPaintCan()
         paint.updateCanEmpty()
         const actual = paint.empty;
-        assert.strictEqual(actual, true)
+        assert.strictEqual(actual, true);
     });
 });
