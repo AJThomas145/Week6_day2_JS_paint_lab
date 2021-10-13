@@ -36,4 +36,28 @@ describe("Decorator", function(){
         const actual = decorator.totalLitresOfPaintInStock();
         assert.strictEqual(actual, 15)
     });
+
+    it("should be able to calculate if there is enough paint to paint room", function(){
+        room = new Room(10)
+        paint1 = new Paint(10)
+        paint2 = new Paint(5)
+        decorator.addPaintToStock(paint1)
+        decorator.addPaintToStock(paint2)
+        const totalPaint = decorator.totalLitresOfPaintInStock()
+        const actual = decorator.enoughPaintToPaintRoom(room, totalPaint);
+        assert.strictEqual(actual, true)
+    });
+
+    it("should be able to paint room if there is enough paint in stock", function(){
+        room = new Room(10)
+        paint1 = new Paint(10)
+        paint2 = new Paint(5)
+        decorator.addPaintToStock(paint1)
+        decorator.addPaintToStock(paint2)
+        const totalPaint = decorator.totalLitresOfPaintInStock()
+        const canPaintRoom = decorator.enoughPaintToPaintRoom(room, totalPaint)
+        const actual = decorator.paintRoom(canPaintRoom);
+        assert.strictEqual(actual, true)
+
+    });
 })
