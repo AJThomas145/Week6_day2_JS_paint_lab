@@ -12,11 +12,11 @@ Decorator.prototype.numberOfCansOfPaintInStock = function(){
 }
 
 Decorator.prototype.totalLitresOfPaintInStock = function(decorator){
-    const litres = 0;
-    for (const litre in decorator){
-        litres+=decorator.paint_stock.number_of_litres;
+    let totalPaint = 0;
+    for (value of decorator.paint_stock.paint.litres){
+        totalPaint+=value;
     }
-    return litres
+    return totalPaint
 }
 
 module.exports = Decorator
